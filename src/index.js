@@ -1,14 +1,9 @@
-import React from 'react';
 import './styles.css';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import { render } from 'react-dom';
 
 const rootElement = document.querySelector('#root');
 
-const element = (
-  <div className="greeting">
-    <div className="greeting__title">Hello, React!</div>
-    <div className="greeting__text">I'am learning React</div>
-  </div>
-);
+const greetingElement = React.createElement('div', { className: 'greeting' }, 'Hello, React!');
 
-ReactDOM.render(element, rootElement);
+ReactDOM.render(greetingElement, rootElement);
