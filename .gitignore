@@ -1,1 +1,8 @@
 node_modules/
+src/
+.babelrc
+.eslintrc.js
+.prettierrc
+package-lock.json
+package.json
+webpack.config.js
