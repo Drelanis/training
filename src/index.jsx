@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Comment from './Comment.jsx';
+import './Greeting.jsx';
+import Greeting from './Greeting.jsx';
 
 const rootElement = document.querySelector('#root');
 
-const userInfo = {
-  name: 'Tom',
-  avatarUrl: 'https://avatars1.githubusercontent.com',
-};
+const birthDate = new Date().setUTCFullYear(1996, 11, 27);
 
-ReactDOM.render(<Comment author={userInfo} text="Good job!" date={new Date()} />, rootElement);
+ReactDOM.render(
+  <Greeting firstName="John" lastName="Doe" birthDate={new Date(birthDate).getFullYear()} />,
+  rootElement,
+);
