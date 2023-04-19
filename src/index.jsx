@@ -6,9 +6,6 @@ import Greeting from './Greeting.jsx';
 
 const rootElement = document.querySelector('#root');
 
-const birthDate = new Date().setUTCFullYear(1996, 11, 27);
+const birthDate = new Date();
 
-ReactDOM.render(
-  <Greeting firstName="John" lastName="Doe" birthDate={new Date(birthDate).getFullYear()} />,
-  rootElement,
-);
+ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate={birthDate} />, rootElement);
