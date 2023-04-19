@@ -4,28 +4,24 @@ import './index.scss';
 
 const rootElement = document.querySelector('#root');
 
-const element = (
-  <main className="page">
-    <form className="login-form">
-      <h1 className="form-title">Profile</h1>
-      <div className="form-control">
-        <label className="form-label" htmlFor="name">
-          Name
-        </label>
-        <input className="form-input" type="text" id="name" name="name" value="anonymous" />
-      </div>
-      <div className="form-control">
-        <label className="form-label" id="age" htmlFor="age">
-          Age
-        </label>
-        <input className="form-input" type="number" value="17" name="age" />
-        <span style={{ color: 'red', fontWeight: 700 }}>To young</span>
-      </div>
-      <button className="submit-button" type="submit">
-        Submit
-      </button>
-    </form>
-  </main>
-);
+const getSeconds = () => {
+  const seconds = new Date().getSeconds();
 
-ReactDOM.render(element, rootElement);
+  const backgroundColor = seconds % 2 === 0 ? '#fff' : '#000';
+  const color = seconds % 2 !== 0 ? '#fff' : '#000';
+
+  const styles = {
+    color,
+    backgroundColor,
+  };
+
+  const element = (
+    <div className="seconds" style={styles}>
+      Now is {seconds}
+    </div>
+  );
+
+  ReactDOM.render(element, rootElement);
+};
+
+setInterval(() => getSeconds(), 1000);
