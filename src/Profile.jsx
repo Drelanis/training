@@ -10,7 +10,7 @@ const Profile = props => {
         {props.userData.firstName} {props.userData.lastName}
       </div>
       <div className="profile__birth">
-        Was born {age} in {props.userData.birthPlace}.
+        Was born {age} in {props.userData.birthPlace}
       </div>
     </>
   );
