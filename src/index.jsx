@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import './Greeting.jsx';
-import Greeting from './Greeting.jsx';
+import './Profile.jsx';
+import Profile from './Profile.jsx';
 
 const rootElement = document.querySelector('#root');
 
-const birthDate = new Date();
+const userData = {
+  firstName: 'James',
+  lastName: 'Bond',
+  birthDate: '1991-01-17T11:11:11.819Z',
+  birthPlace: 'London',
+};
 
-ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate={birthDate} />, rootElement);
+ReactDOM.render(<Profile userData={userData} />, rootElement);
