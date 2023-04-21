@@ -5,13 +5,6 @@ const GREEN = '#008000';
 const BLUE = '#0000ff';
 
 class Colors extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: props.color,
-    };
-  }
-
   setBackgroundColor = event => {
     document.body.style.backgroundColor = event.target.style.backgroundColor;
   };
