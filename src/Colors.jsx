@@ -18,7 +18,7 @@ class Colors extends Component {
 
   render() {
     return (
-      <>
+      <div className="colors">
         <div
           className="colors__button"
           style={{ backgroundColor: RED }}
@@ -34,7 +34,7 @@ class Colors extends Component {
           style={{ backgroundColor: BLUE }}
           onClick={this.setBackgroundColor}
         ></div>
-      </>
+      </div>
     );
   }
 }
