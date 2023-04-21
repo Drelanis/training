@@ -1,8 +1,8 @@
 import React from 'react';
-import Toggler from './Toggler.jsx';
+import ColorPicker from './ColorPicker.jsx';
 
 const App = () => {
-  return <Toggler toggleValue={false} />;
+  return <ColorPicker />;
 };
 
 export default App;
