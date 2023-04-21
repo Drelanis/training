@@ -5,8 +5,8 @@ const GREEN = '#0f0';
 const BLUE = '#00f';
 
 class Colors extends Component {
-  setBackgroundColor = event => {
-    document.body.style.backgroundColor = event.target.style.backgroundColor;
+  setBodyColor = color => {
+    document.body.style.backgroundColor = color;
   };
 
   render() {
@@ -15,17 +15,17 @@ class Colors extends Component {
         <div
           className="colors__button"
           style={{ backgroundColor: RED }}
-          onClick={this.setBackgroundColor}
+          onClick={() => this.setBodyColor(RED)}
         ></div>
         <div
           className="colors__button"
           style={{ backgroundColor: GREEN }}
-          onClick={this.setBackgroundColor}
+          onClick={() => this.setBodyColor(GREEN)}
         ></div>
         <div
           className="colors__button"
           style={{ backgroundColor: BLUE }}
-          onClick={this.setBackgroundColor}
+          onClick={() => this.setBodyColor(BLUE)}
         ></div>
       </div>
     );
