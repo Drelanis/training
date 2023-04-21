@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const RED = '#ff0000';
-const GREEN = '#008000';
-const BLUE = '#0000ff';
+const RED = '#f00';
+const GREEN = '#0f0';
+const BLUE = '#00f';
 
 class Colors extends Component {
   setBackgroundColor = event => {
