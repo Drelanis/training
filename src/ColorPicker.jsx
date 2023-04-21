@@ -5,16 +5,12 @@ class ColorPicker extends Component {
     super(props);
   }
 
-  pickerTitle() {
-    return document.querySelector('.picker__title');
-  }
-
   renderColor = color => {
-    this.pickerTitle().textContent = `${color}`;
+    document.querySelector('.picker__title').textContent = `${color}`;
   };
 
   reset = () => {
-    this.pickerTitle().textContent = '';
+    document.querySelector('.picker__title').textContent = '';
   };
 
   render() {
