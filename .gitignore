@@ -2,4 +2,3 @@ node_modules
 .idea
 .VS_Code
 package-lock.json
-App.jsx

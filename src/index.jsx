@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from '../App.jsx';
+import App from './App.jsx';
 import './index.scss';
-import GoodButton from './GoodButton.jsx';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<GoodButton />, rootElement);
+ReactDOM.render(<App />, rootElement);
