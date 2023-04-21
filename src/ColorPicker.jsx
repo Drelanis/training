@@ -11,15 +11,14 @@ class ColorPicker extends Component {
 
   renderColor = event => {
     if (event.target.className.split(' ').includes('picker__button_coral'))
-      this.pickerTitle().textContent = 'coral';
+      this.pickerTitle().textContent = 'Coral';
     if (event.target.className.split(' ').includes('picker__button_aqua'))
-      this.pickerTitle().textContent = 'aqua';
+      this.pickerTitle().textContent = 'Aqua';
     if (event.target.className.split(' ').includes('picker__button_bisque'))
-      this.pickerTitle().textContent = 'bisque';
+      this.pickerTitle().textContent = 'Bisque';
   };
 
   reset = () => {
-    const pickerTitle = document.querySelector('.picker__title');
     this.pickerTitle().textContent = '';
   };
 
