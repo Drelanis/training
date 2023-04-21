@@ -1,14 +1,8 @@
 import React from 'react';
-import Clock from './Clock.jsx';
+import GoodButton from './GoodButton.jsx';
 
 const App = () => {
-  return (
-    <>
-      <Clock location="NEW YORK" offset={-5} />
-      <Clock location="KYIV" offset={2} />
-      <Clock location="LONDON" offset={0} />
-    </>
-  );
+  return <GoodButton />;
 };
 
 export default App;
