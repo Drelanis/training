@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const GoodButton = () => {
-  return (
-    <button class="fancy-button" onClick={() => alert('Good job!')}>
-      Click me!
-    </button>
-  );
-};
+class GoodButton extends Component {
+  showText = event => {
+    alert(event.target.textContent);
+  };
+
+  render() {
+    return (
+      <button className="fancy-button" onClick={event => this.showText(event)}>
+        Click me!
+      </button>
+    );
+  }
+}
 
 export default GoodButton;
