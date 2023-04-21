@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class ColorPicker extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderColor = color => {
     document.querySelector('.picker__title').textContent = `${color}`;
   };
