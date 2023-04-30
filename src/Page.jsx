@@ -30,7 +30,7 @@ class Page extends Component {
   render() {
     return (
       <div className="page">
-        {this.state.info ? <Info info={this.state.info} /> : null}
+        <Info info={this.state.info} />
         <div className="actions">
           <button className="btn" onClick={() => this.getInfoAboutFirstProduct()}>
             IPhone 13
