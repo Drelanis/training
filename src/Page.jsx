@@ -5,25 +5,19 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      info: '',
+      info: null,
     };
   }
 
-  getInfoAboutFirstProduct() {
+  renderText = text => {
     this.setState({
-      info: 'Price is 500$. Available in 2 colors',
+      info: text,
     });
-  }
-
-  getInfoAboutSecondProduct() {
-    this.setState({
-      info: 'Price is 650$. Not available in 1 color',
-    });
-  }
+  };
 
   clear() {
     this.setState({
-      info: '',
+      info: null,
     });
   }
 
@@ -32,10 +26,18 @@ class Page extends Component {
       <div className="page">
         <Info info={this.state.info} />
         <div className="actions">
-          <button className="btn" onClick={() => this.getInfoAboutFirstProduct()}>
+          <button
+            className="btn"
+            onClick={() =>
+              this.renderText((this.state.info = 'Price is 500$. Available in 2 colors'))
+            }
+          >
             IPhone 13
           </button>
-          <button className="btn" onClick={() => this.getInfoAboutSecondProduct()}>
+          <button
+            className="btn"
+            onClick={() => this.renderText('Price is 650$. Not available in 1 color')}
+          >
             IPhone 13 Pro
           </button>
           <button className="btn" onClick={() => this.clear()}>
