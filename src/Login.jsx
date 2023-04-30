@@ -7,7 +7,7 @@ class Login extends Component {
 
   render() {
     return (
-      <button className="btn login" onClick={this.props.onLogout}>
+      <button className="btn login" onClick={this.props.onLogin}>
         Login
       </button>
     );
