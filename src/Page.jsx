@@ -9,9 +9,9 @@ class Page extends Component {
     };
   }
 
-  renderText = text => {
+  renderText = info => {
     this.setState({
-      info: text,
+      info,
     });
   };
 

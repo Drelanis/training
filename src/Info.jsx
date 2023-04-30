@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Info extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    if (!this.props.info) return null;
-    return <div className="message">{this.props.info}</div>;
-  }
-}
+const Info = ({ info }) => {
+  if (!info) return null;
+  return <div className="message">{info}</div>;
+};
 
 export default Info;
