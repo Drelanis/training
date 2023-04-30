@@ -7,7 +7,7 @@ class Greeting extends Component {
     super(props);
   }
   render() {
-    return this.props.isLoggedIn ? <GuestGreeting /> : <UserGreeting />;
+    return this.props.isLoggedIn ? <UserGreeting /> : <GuestGreeting />;
   }
 }
 
