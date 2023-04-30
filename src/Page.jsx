@@ -5,26 +5,26 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      info: null,
+      text: null,
     };
   }
 
-  renderText = info => {
+  renderText = text => {
     this.setState({
-      info,
+      text,
     });
   };
 
   clear() {
     this.setState({
-      info: null,
+      text: null,
     });
   }
 
   render() {
     return (
       <div className="page">
-        <Info info={this.state.info} />
+        <Info info={this.state.text} />
         <div className="actions">
           <button
             className="btn"
