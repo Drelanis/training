@@ -28,11 +28,14 @@ class Page extends Component {
         <div className="actions">
           <button
             className="btn"
-            onClick={() => this.renderText('IPhone 13 - Price is 500$. Available in 2 colors')}
+            onClick={() => this.renderText('Price is 500$. Available in 2 colors')}
           >
             IPhone 13
           </button>
-          <button className="btn" onClick={() => this.renderText('Price is 650$. Not available')}>
+          <button
+            className="btn"
+            onClick={() => this.renderText('Price is 650$. Not available in 1 color')}
+          >
             IPhone 13 Pro
           </button>
           <button className="btn" onClick={() => this.clear()}>
