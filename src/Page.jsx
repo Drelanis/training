@@ -9,7 +9,7 @@ class Page extends Component {
     };
   }
 
-  renderText = text => {
+  setText = text => {
     this.setState({
       text,
     });
@@ -22,17 +22,17 @@ class Page extends Component {
         <div className="actions">
           <button
             className="btn"
-            onClick={() => this.renderText('Price is 500$. Available in 2 colors')}
+            onClick={() => this.setText('Price is 500$. Available in 2 colors')}
           >
             IPhone 13
           </button>
           <button
             className="btn"
-            onClick={() => this.renderText('Price is 650$. Not available in 1 color')}
+            onClick={() => this.setText('Price is 650$. Not available in 1 color')}
           >
             IPhone 13 Pro
           </button>
-          <button className="btn" onClick={() => this.renderText(null)}>
+          <button className="btn" onClick={() => this.setText('')}>
             Clear
           </button>
         </div>
