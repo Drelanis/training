@@ -32,10 +32,7 @@ class Page extends Component {
           >
             IPhone 13
           </button>
-          <button
-            className="btn"
-            onClick={() => this.renderText('Price is 650$. Not available in 1 color')}
-          >
+          <button className="btn" onClick={() => this.renderText('Price is 650$. Not available')}>
             IPhone 13 Pro
           </button>
           <button className="btn" onClick={() => this.clear()}>
