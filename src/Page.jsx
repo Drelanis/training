@@ -15,12 +15,6 @@ class Page extends Component {
     });
   };
 
-  clear() {
-    this.setState({
-      text: null,
-    });
-  }
-
   render() {
     return (
       <div className="page">
@@ -38,7 +32,7 @@ class Page extends Component {
           >
             IPhone 13 Pro
           </button>
-          <button className="btn" onClick={() => this.clear()}>
+          <button className="btn" onClick={() => this.renderText(null)}>
             Clear
           </button>
         </div>
