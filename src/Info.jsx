@@ -6,7 +6,7 @@ class Info extends Component {
   }
 
   render() {
-    return <div className="text">{this.props.info}</div>;
+    return <div className="message">{this.props.info}</div>;
   }
 }
 
