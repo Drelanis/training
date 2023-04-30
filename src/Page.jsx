@@ -11,13 +11,13 @@ class Page extends Component {
 
   getInfoAboutFirstProduct() {
     this.setState({
-      info: 'IPhone 13 - Price is 500$. Available in 2 colors',
+      info: 'Price is 500$. Available in 2 colors',
     });
   }
 
   getInfoAboutSecondProduct() {
     this.setState({
-      info: 'Price is 650$. Not available',
+      info: 'Price is 650$. Not available in 1 color',
     });
   }
 
