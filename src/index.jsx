@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Status from './Status.jsx';
+import Auth from './Auth.jsx';
 import './index.scss';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Status isOnline={false} />, rootElement);
+ReactDOM.render(<Auth />, rootElement);
