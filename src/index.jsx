@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from './Page.jsx';
+import Status from './Status.jsx';
 import './index.scss';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Page />, rootElement);
+ReactDOM.render(<Status isOnline={false} />, rootElement);
