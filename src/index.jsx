@@ -32,4 +32,14 @@ const transactions = [
   },
 ];
 
-ReactDOM.render(<TransactionsList transactions={transactions} />, rootElement);
+const transactionsWithFormateDate = data => {
+  const newData = [...data];
+  newData.forEach(transaction => {
+    transaction.amount = new Intl.NumberFormat('en-GB').format(transaction.amount);
+  });
+  return newData;
+};
+
+const formatTransactions = transactionsWithFormateDate(transactions);
+
+ReactDOM.render(<TransactionsList transactions={formatTransactions} />, rootElement);
