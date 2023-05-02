@@ -6,9 +6,9 @@ class TransactionsList extends Component {
     super(props);
   }
 
-  // formateNumber = (number) => {
-  //   return new Intl.NumberFormat('en-GB').format(number);
-  // }
+  formateNumber = number => {
+    return new Intl.NumberFormat('en-GB').format(number);
+  };
 
   render() {
     return (
@@ -18,9 +18,10 @@ class TransactionsList extends Component {
             key={id}
             from={from}
             to={to}
-            amount={new Intl.NumberFormat('en-GB').format(amount)}
+            amount={amount}
             rate={rate}
             time={time}
+            format={this.formateNumber}
           />
         ))}
       </ul>
