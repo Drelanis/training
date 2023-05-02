@@ -7,18 +7,10 @@ class TransactionsList extends Component {
   }
 
   render() {
-    const format = new Intl.NumberFormat('en-GB');
     return (
       <ul className="transactions">
         {this.props.transactions.map(({ id, from, to, amount, rate, time }) => (
-          <Transaction
-            key={id}
-            from={from}
-            to={to}
-            amount={format.format(amount)}
-            rate={rate}
-            time={time}
-          />
+          <Transaction key={id} from={from} to={to} amount={amount} rate={rate} time={time} />
         ))}
       </ul>
     );
