@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Transaction from './Transaction';
-import { formatAmount } from './formatNumber';
 
 class TransactionsList extends Component {
   constructor(props) {
@@ -10,15 +9,8 @@ class TransactionsList extends Component {
   render() {
     return (
       <ul className="transactions">
-        {this.props.transactions.map(({ id, from, to, amount, rate, time }) => (
-          <Transaction
-            key={id}
-            from={from}
-            to={to}
-            amount={formatAmount.format(amount)}
-            rate={rate}
-            time={time}
-          />
+        {this.props.transactions.map(transaction => (
+          <Transaction key={transaction.id} {...transaction} />
         ))}
       </ul>
     );
