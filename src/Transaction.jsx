@@ -2,7 +2,7 @@ import moment from 'moment/moment';
 import React from 'react';
 
 const Transaction = ({ from, to, amount, rate, time }) => {
-  const format = new Intl.NumberFormat('en-GB');
+  const formatAmount = new Intl.NumberFormat('en-GB');
   const formatTime = moment(time);
   return (
     <li className="transaction">
@@ -12,7 +12,7 @@ const Transaction = ({ from, to, amount, rate, time }) => {
         {from} → {to}
       </span>
       <span className="transaction__rate">{rate}</span>
-      <span className="transaction__amount">{format.format(amount)}</span>
+      <span className="transaction__amount">{formatAmount.format(amount)}</span>
     </li>
   );
 };
