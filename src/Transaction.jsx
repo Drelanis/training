@@ -3,7 +3,7 @@ import React from 'react';
 
 const Transaction = ({ from, to, amount, rate, time }) => {
   const date = moment(time).format('DD MMM');
-  const correctTime = moment(time).format('hh:mm');
+  const correctTime = moment(time).format('HH:mm');
   return (
     <li className="transaction">
       <span className="transaction__date">{date}</span>
