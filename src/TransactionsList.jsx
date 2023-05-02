@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Transaction from './Transaction';
-import { formatAmount } from './format';
+import { formatAmount } from './formatNumber';
 
 class TransactionsList extends Component {
   constructor(props) {
