@@ -40,6 +40,7 @@ const transactionsWithFormateDate = data => {
   return newData;
 };
 
-const formatTransactions = transactionsWithFormateDate(transactions);
-
-ReactDOM.render(<TransactionsList transactions={formatTransactions} />, rootElement);
+ReactDOM.render(
+  <TransactionsList transactions={transactionsWithFormateDate(transactions)} />,
+  rootElement,
+);
