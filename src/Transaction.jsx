@@ -2,12 +2,10 @@ import moment from 'moment/moment';
 import React from 'react';
 
 const Transaction = ({ from, to, amount, rate, time }) => {
-  const date = moment(time).format('DD MMM');
-  const correctTime = moment(time).format('HH:mm');
   return (
     <li className="transaction">
-      <span className="transaction__date">{date}</span>
-      <span className="transaction__time">{correctTime}</span>
+      <span className="transaction__date">{moment(time).format('DD MMM')}</span>
+      <span className="transaction__time">{moment(time).format('HH:mm')}</span>
       <span className="transaction__assets">
         {from} → {to}
       </span>
