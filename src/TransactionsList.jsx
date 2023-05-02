@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Transaction from './Transaction';
+import { formatAmount } from './format';
 
 class TransactionsList extends Component {
   constructor(props) {
     super(props);
   }
-  formatAmount = new Intl.NumberFormat('en-GB');
 
   render() {
     return (
@@ -15,7 +15,7 @@ class TransactionsList extends Component {
             key={id}
             from={from}
             to={to}
-            amount={this.formatAmount.format(amount)}
+            amount={formatAmount.format(amount)}
             rate={rate}
             time={time}
           />
