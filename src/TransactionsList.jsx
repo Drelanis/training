@@ -6,11 +6,8 @@ class TransactionsList extends Component {
     super(props);
   }
 
-  formateNumber = number => {
-    return new Intl.NumberFormat('en-GB').format(number);
-  };
-
   render() {
+    const format = new Intl.NumberFormat('en-GB');
     return (
       <ul className="transactions">
         {this.props.transactions.map(({ id, from, to, amount, rate, time }) => (
@@ -18,10 +15,9 @@ class TransactionsList extends Component {
             key={id}
             from={from}
             to={to}
-            amount={amount}
+            amount={format.format(amount)}
             rate={rate}
             time={time}
-            format={this.formateNumber}
           />
         ))}
       </ul>
