@@ -14,7 +14,7 @@ class Life extends Component {
     console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
   }
 
-  componentDidUpdate(nextProps, nextState) {
+  componentDidUpdate(prevProps, prevState) {
     console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   }
 
@@ -23,7 +23,6 @@ class Life extends Component {
   }
 
   render() {
-    if (!this.props) this.componentDidUpdate();
     console.log('return React element to build DOM');
     return null;
   }
