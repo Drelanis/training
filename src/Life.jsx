@@ -3,25 +3,19 @@ import React, { Component } from 'react';
 class Life extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      show: 'constructor: good place to create state',
-    };
-    console.log(this.state.show);
   }
 
   componentDidMount() {
     console.log('componentDidMount: API calls, subscriptions');
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate() {
     console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
+    return true;
   }
 
   componentDidUpdate(prevProps, prevState) {
-    this.setState({
-      show: 'componentDidUpdate(prevProps, prevState): some updates based on new props',
-    });
-    console.log(this.state.show);
+    console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   }
 
   componentWillUnmount() {
