@@ -5,26 +5,20 @@ class ConnectionStatus extends Component {
     connection: true,
   };
 
-  setOnlineStatus = () => {
+  setStatusOfConnection = () => {
     this.setState({
-      connection: true,
-    });
-  };
-
-  setOfflineStatus = () => {
-    this.setState({
-      connection: false,
+      connection: window.navigator.onLine,
     });
   };
 
   componentDidMount() {
-    window.addEventListener('online', this.setOnlineStatus);
-    window.addEventListener('offline', this.setOfflineStatus);
+    window.addEventListener('online', this.setStatusOfConnection);
+    window.addEventListener('offline', this.setStatusOfConnection);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('online', this.setOnlineStatus);
-    window.removeEventListener('offline', this.setOfflineStatus);
+    window.removeEventListener('online', this.setStatusOfConnection);
+    window.removeEventListener('offline', this.setStatusOfConnection);
   }
 
   render() {
